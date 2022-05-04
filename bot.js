@@ -3,13 +3,6 @@ const { FakeBrowser } = require('fakebrowser')
 !(async () => {
   const createBrowserAndGoto = async (userDataDir, url) => {
     const builder = new FakeBrowser.Builder()
-      .proxy({
-        // socks5://ip:port
-        // http://ip:port
-        // https://ip:port
-        proxy: 'http://127.0.0.1:1080',
-        exportIP: '127.0.0.1',
-      })
       .vanillaLaunchOptions({
         headless: false,
       })
